@@ -1,0 +1,36 @@
+/* 初始化页面 */
+*{
+    margin: 0;
+    padding: 0;
+}
+a:hover,a:active,a:visited,a:link{
+    text-decoration: none;
+}
+/* 主体 */
+/* 左边区域 */
+.main .item-left{
+    padding: 10px;
+}
+.item-left ol,
+.item-left ul,
+.item-left li{
+    list-style-type: none;
+}
+.panel-body a{
+    display: block;
+    text-decoration: none;
+}
+.panel-body .update,.panel-body .delete{
+    display: inline-block;
+}
+/* 右边区域 */
+.item-right{
+    padding: 10px;
+    border-left: 1px solid #ddd;
+}
+.item-left .panel-group .panel + .panel {
+    margin-top: 0px;
+}
+.item-right .username{
+    margin-top: 10px;
+}

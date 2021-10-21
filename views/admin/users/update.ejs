@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/welcome.css">
+</head>
+
+<body>
+    <%- include('../components/header.ejs')%>
+        <div class="container">
+            <div class="row main">
+                <!-- 左栏 -->
+                <div class="col-md-2 item-left">
+                    <%- include('../components/aside.ejs')%>
+                </div>
+                <!-- 右栏 -->
+                <div class="col-md-10 item-right">
+                    <!-- 路径导航 -->
+                    <ol class="breadcrumb">
+                        <li><a href="#">当前位置</a></li>
+                        <li><a href="#">用户管理</a></li>
+                        <li><a href="#">修改</a></li>
+                    </ol>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form action="/api/doupdate?_id=<%=updatelist2._id%>" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="">用户名</label>
+                                    <input type="text" value="<%=updatelist2.username%>" name="username"
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">密码</label>
+                                    <input type="text" name="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">头像</label>
+                                    <img src="<%=updatelist2.photo%>" alt="" width="45px" height="45px">
+                                    <input type="file" name="photo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">年龄</label>
+                                    <input type="text" name="age" class="form-control" value="<%=updatelist2.age%>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">地址</label>
+                                    <input type="text" name="address" class="form-control" value="<%=updatelist2.address%>">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-default">确定修改</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/js/jquery.js"></script>
+        <script src="/js/bootstrap.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container1 .btn,
+.container1 .username{
+    margin-top: 10px;
+}
+.container1{
+    background-color: rgb(194, 233, 248);
+}
+.container1 h2{
+    margin-top: 10px;
+}
